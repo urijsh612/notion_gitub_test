@@ -1,0 +1,20 @@
+# 필요한 패키지
+# eslint eslint-config-prettier eslint-plugin-import prettier @typescript-eslint/eslint-plugin @typescript-eslint/parser
+parser: "@typescript-eslint/parser"
+parserOptions:
+    "project": "tsconfig.json"
+plugins:
+    - "@typescript-eslint/eslint-plugin"
+    - "jest"
+extends:
+    - "plugin:@typescript-eslint/eslint-recommended"
+    - "plugin:@typescript-eslint/recommended"
+    - "plugin:jest/recommended"
+    - "prettier"
+root: true
+env:
+    "node": true
+    "jest": true
+rules:
+    "@typescript-eslint/no-unused-vars":
+        ["warn", { args: "none", varsIgnorePattern: "^_" }]
